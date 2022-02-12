@@ -6,8 +6,8 @@
 1.  Docker and docker-compose
 
 ## Usage
-
-`docker-compose up -d`
+1. Modify `.env`
+1. `docker-compose up -d`
 
 ## Modifications
 - Next.js container is commented out

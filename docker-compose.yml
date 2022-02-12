@@ -28,6 +28,8 @@ services:
             - ./docker/postlightheadlesswpstarter.wordpress.xml:/var/www/postlightheadlesswpstarter.wordpress.xml
             - ./docker/images:/var/www/images
             - ./docker/plugins:/var/www/plugins
+        environment:
+            VIRTUAL_HOST: ${WP_VIRTUAL_HOST}
     # frontend-next:
     #     command: bash -c 'yarn && yarn start'
     #     container_name: frontend
@@ -52,3 +54,4 @@ services:
         volumes:
             - ./frontend-graphql:/home/node/app
         working_dir: /home/node/app
+        environment: ${VIRTUAL_HOST}
